@@ -1,0 +1,36 @@
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 40px;
+    margin-top: 30px;
+    
+}
+.pais{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.container{
+    width: 260px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    justify-self: center;
+}
+.container img{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.data{
+    text-align: left;
+    margin-left: 10px;
+}
+.link{
+    text-decoration: none;
+    color:black
+}
+.link2{
+    text-decoration: none;
+    color:#198754;
+}

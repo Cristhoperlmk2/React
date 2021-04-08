@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Paises from './componentes/Paises'
+import NavBar from './componentes/Navbar'
+import { Provider } from 'react-redux'
+import { Route} from "react-router-dom";
+import Detalle from './componentes/detalle'
+import Region from "./componentes/Regiones"
+import store from './store/index'
+
 
 function App() {
   return (
+    <Provider store={store}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <NavBar/>
+    <Route exact path="/" component={Paises} />
+    <Route  path="/detalle/:name" component={Detalle} />
+    <Route path="/region/:region" component={Region} />
     </div>
+    </Provider>
   );
 }
 
